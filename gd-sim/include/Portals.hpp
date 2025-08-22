@@ -25,3 +25,10 @@ struct SpeedPortal : public EffectObject {
     SpeedPortal(Vec2D size, std::unordered_map<int, std::string>&& fields);
     void collide(Player&) const override;
 };
+
+struct TeleportPortal : public EffectObject {
+    int group;
+    TeleportPortal* target;
+    TeleportPortal(Vec2D size, std::unordered_map<int, std::string>&& fields);
+    void collide(Player&) const override;
+};

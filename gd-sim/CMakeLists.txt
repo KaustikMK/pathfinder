@@ -16,3 +16,4 @@ add_executable(gd-sim-test ${SOURCES} test/test.cpp)
 
 set_target_properties(gd-sim-test PROPERTIES INTERPROCEDURAL_OPTIMIZATION 0)
 target_include_directories(gd-sim-test PRIVATE include)
+target_compile_features(gd-sim-test PRIVATE cxx_std_20)
