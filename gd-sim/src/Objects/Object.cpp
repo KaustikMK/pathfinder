@@ -10,6 +10,7 @@
 #include <Pad.hpp>
 #include <Orb.hpp>
 #include <Slope.hpp>
+#include <EffectObject.hpp>
 
 struct range : public std::pair<int, int> {
 	range(int i) : std::pair<int, int>({i, i}) {}
@@ -145,14 +146,17 @@ std::optional<ObjectContainer> Object::create(std::unordered_map<int, std::strin
 		1717, 1723, 1743, 1745, 1747, 1749, 1906
 	}), Slope, 30, 30)
 
-	objs(({
-		291, 295, 301, 307, 311, 317, 323, 327, 333, 339,
-		345, 351, 355, 364, 367, 372, 484, 493, 652, 666,
-		674, 710, 712, 727, 729, 887, 1339, 1342, 1345,
-		1718, 1724, 1744, 1746, 1748, 1750, 1907
-	}), Slope, 60, 30)
+        objs(({
+                291, 295, 301, 307, 311, 317, 323, 327, 333, 339,
+                345, 351, 355, 364, 367, 372, 484, 493, 652, 666,
+                674, 710, 712, 727, 729, 887, 1339, 1342, 1345,
+                1718, 1724, 1744, 1746, 1748, 1750, 1907
+        }), Slope, 60, 30)
 
-	return {};
+        if (id >= 1000)
+                return ObjectContainer(EffectObject({0, 0}, std::move(ob)));
+
+        return {};
 }
 
 

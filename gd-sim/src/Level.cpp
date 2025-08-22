@@ -24,9 +24,10 @@ void Level::initLevelSettings(std::string const& lvlSettings, Player& player) {
 	else if (player.speed == 1)
 		player.speed = 0;
 
-	player.small = atoi(get_or("kA3", "0"));
-	player.upsideDown = atoi(get_or("kA11", "0"));
-	player.vehicle = Vehicle::from(static_cast<VehicleType>(atoi(get_or("kA2", "0"))));
+        player.small = atoi(get_or("kA3", "0"));
+        player.upsideDown = atoi(get_or("kA11", "0"));
+        player.dual = atoi(get_or("kA15", "0"));
+        player.vehicle = Vehicle::from(static_cast<VehicleType>(atoi(get_or("kA2", "0"))));
 }
 
 Level::Level(std::string const& lvlString) {

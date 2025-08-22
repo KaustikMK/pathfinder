@@ -5,11 +5,10 @@
 #include <cmath>
 
 Block::Block(Vec2D s, std::unordered_map<int, std::string>&& fields) : Object(s, std::move(fields)) {
-	prio = 1;
+        prio = 1;
 
-	if ((int)fabs(rotation) % 180 != 0)
-		size = {size.y, size.x};
-	rotation = 0;
+        if ((int)fabs(rotation) % 180 != 0)
+                size = {size.y, size.x};
 
 	if (fields[1] == "468" && size.y == 5) {
 		size.y -= 3.5;
@@ -92,7 +91,13 @@ void trySnap(Block const& b, Player& p) {
 }
 
 void Block::collide(Player& p) const {
-	int clip = (p.vehicle.type == VehicleType::Ufo || p.vehicle.type == VehicleType::Ship) ? 7 : 10;
+        if ((int)std::abs(rotation) % 90 != 0) {
+                if (touching(p))
+                        p.dead = true;
+                return;
+        }
+
+        int clip = (p.vehicle.type == VehicleType::Ufo || p.vehicle.type == VehicleType::Ship) ? 7 : 10;
 
 	if (p.upsideDown != p.prevPlayer().upsideDown && !p.gravityPortal)
 		return;

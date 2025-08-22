@@ -27,20 +27,23 @@ Slope::Slope(Vec2D size, std::unordered_map<int, std::string>&& fields) : Block(
 }
 
 int Slope::gravOrient(Player const& p) const {
-	int orient = orientation;
+        int orient = orientation;
 
-	if (p.upsideDown) {
-		if (orient == 3)
-			orient = 0;
-		else if (orient == 2)
-			orient = 1;
-		else if (orient == 0)
-			orient = 3;
-		else if (orient == 1)
-			orient = 2;
-	}
+        if (p.upsideDown) {
+                if (orient == 3)
+                        orient = 0;
+                else if (orient == 2)
+                        orient = 1;
+                else if (orient == 0)
+                        orient = 3;
+                else if (orient == 1)
+                        orient = 2;
+        }
 
-	return orient;
+        if (orient >= 2)
+                orient -= 2;
+
+        return orient;
 }
 
 double Slope::angle() const {
@@ -178,16 +181,12 @@ bool Slope::touching(Player const& p) const {
 
 	//if (p.upsideDown) return false;
 
-	switch (gravOrient(p)) {
-		case 0:
-			return p.grav(expectedY(p)) >= p.grav(p.pos.y);
-		case 1:
-			return p.grav(expectedY(p.prevPlayer())) >= p.grav(p.pos.y);
-		case 2:
-			return p.grav(expectedY(p)) <= p.grav(p.pos.y);//-(frontBottom.x - pos.x >= frontBottom.y - pos.y);
-		case 3:
-			return false;//frontBottom.x - pos.x <= frontBottom.y - pos.y;
-		default:
-			return false;
-	}
+        switch (gravOrient(p)) {
+                case 0:
+                        return p.grav(expectedY(p)) >= p.grav(p.pos.y);
+                case 1:
+                        return p.grav(expectedY(p.prevPlayer())) >= p.grav(p.pos.y);
+                default:
+                        return false;
+        }
 }
