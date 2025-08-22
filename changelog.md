@@ -1,3 +1,7 @@
+# beta 20
+
+- Add basic support for teleport portals
+
 # beta 19
 
 - Fix ship accelerations

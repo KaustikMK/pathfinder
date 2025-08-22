@@ -8,7 +8,6 @@ Auto-generate macros for levels using simulation! This mod uses a physics simula
 - Upside-down Slopes
 - Partially Rotated Objects (not 90 degrees)
 - Any Non-Visual Triggers
-- Teleport Portals
 
 # How To Use
 
