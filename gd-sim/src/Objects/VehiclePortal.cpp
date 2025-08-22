@@ -18,7 +18,6 @@ VehiclePortal::VehiclePortal(Vec2D size, std::unordered_map<int, std::string>&& 
                 case 660:
                         type = VehicleType::Wave;
                         break;
-                // TODO: verify correct IDs for new 2.2 vehicles
                 case 1331:
                         type = VehicleType::Robot;
                         break;

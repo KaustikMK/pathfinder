@@ -8,11 +8,12 @@
 #include <functional>
 #include <optional>
 
-inline double player_speeds[4] = {
-	251.16007972276924,
-	311.580093712804,
-	387.42014039710523,
-	468.0001388338566
+inline double player_speeds[5] = {
+        251.16007972276924,
+        311.580093712804,
+        387.42014039710523,
+        468.0001388338566,
+        623.160187425608
 };
 
 struct Object;

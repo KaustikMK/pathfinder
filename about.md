@@ -2,21 +2,13 @@
 
 Auto-generate macros for levels using simulation! This mod uses a physics simulator under the hood to solve levels in seconds! It does not come with a bot, you will need to install one for this.
 
-# Supports up to 1.7 level mechanics
+# Supports Geometry Dash 2.2 level mechanics
 ### The following are currently unsupported
 - Duals
 - Upside-down Slopes
 - Partially Rotated Objects (not 90 degrees)
-- 4x Speed
-- Wave Mode
-- Robot Mode
-- Spider Mode
-- Swing Mode
 - Any Non-Visual Triggers
-- Red Pads / Red Orbs
-- Dash Orbs
 - Teleport Portals
-- Many features from 2.2 (work in progress)
 
 # How To Use
 
