@@ -43,8 +43,9 @@ struct Player : public Entity {
 	bool buffer;
 	bool vehicleBuffer; // When buffering a click when transitioning to a vehicle
 
-	bool upsideDown;
-	bool small;
+        bool upsideDown;
+        bool small;
+        bool dual;
 
 	bool gravityPortal; // some vehicles have weird edge cases
 
