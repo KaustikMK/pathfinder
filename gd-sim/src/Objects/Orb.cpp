@@ -23,8 +23,14 @@ bool Orb::touching(Player const& p) const {
 }
 
 const velocity_map<OrbType, VehicleType, bool> orb_velocities = {
-	{{OrbType::Yellow, VehicleType::Cube, false}, {573.48,      603.72,     616.68,    606.42}},
-	{{OrbType::Yellow, VehicleType::Cube, true},  {458.784,     482.976,    481.734,   485.136}},
+        {{OrbType::Yellow, VehicleType::Cube, false}, {573.48,      603.72,     616.68,    606.42}},
+        {{OrbType::Yellow, VehicleType::Cube, true},  {458.784,     482.976,    481.734,   485.136}},
+        {{OrbType::Yellow, VehicleType::Robot, false}, {573.48,      603.72,     616.68,    606.42}},
+        {{OrbType::Yellow, VehicleType::Robot, true},  {458.784,     482.976,    481.734,   485.136}},
+        {{OrbType::Yellow, VehicleType::Spider, false}, {573.48,      603.72,     616.68,    606.42}},
+        {{OrbType::Yellow, VehicleType::Spider, true},  {458.784,     482.976,    481.734,   485.136}},
+        {{OrbType::Yellow, VehicleType::Swing, false}, {573.48,      603.72,     616.68,    606.42}},
+        {{OrbType::Yellow, VehicleType::Swing, true},  {458.784,     482.976,    481.734,   485.136}},
 
 	{{OrbType::Yellow, VehicleType::Ship, false}, {573.48,      603.72,     616.68,    606.42}},
 	{{OrbType::Yellow, VehicleType::Ship, true},  {458.784,     482.976,    481.734,   485.136}},
@@ -36,8 +42,14 @@ const velocity_map<OrbType, VehicleType, bool> orb_velocities = {
 	{{OrbType::Yellow, VehicleType::Ufo, true},   {458.784,     482.976,    481.734,   485.136}},
 
 
-	{{OrbType::Blue, VehicleType::Cube, false},   {-229.392,    -241.488,   -246.672,  -242.568}},
-	{{OrbType::Blue, VehicleType::Cube, true},    {-183.519,    -193.185,   -197.343,  -194.049}},
+        {{OrbType::Blue, VehicleType::Cube, false},   {-229.392,    -241.488,   -246.672,  -242.568}},
+        {{OrbType::Blue, VehicleType::Cube, true},    {-183.519,    -193.185,   -197.343,  -194.049}},
+        {{OrbType::Blue, VehicleType::Robot, false},   {-229.392,    -241.488,   -246.672,  -242.568}},
+        {{OrbType::Blue, VehicleType::Robot, true},    {-183.519,    -193.185,   -197.343,  -194.049}},
+        {{OrbType::Blue, VehicleType::Spider, false},   {-229.392,    -241.488,   -246.672,  -242.568}},
+        {{OrbType::Blue, VehicleType::Spider, true},    {-183.519,    -193.185,   -197.343,  -194.049}},
+        {{OrbType::Blue, VehicleType::Swing, false},   {-229.392,    -241.488,   -246.672,  -242.568}},
+        {{OrbType::Blue, VehicleType::Swing, true},    {-183.519,    -193.185,   -197.343,  -194.049}},
 
 	{{OrbType::Blue, VehicleType::Ship, false},   {-229.392,    -241.488,   -246.672,  -242.568}},
 	{{OrbType::Blue, VehicleType::Ship, true},    {-183.519,    -193.185,   -197.343,  -194.049}},
@@ -49,8 +61,14 @@ const velocity_map<OrbType, VehicleType, bool> orb_velocities = {
 	{{OrbType::Blue, VehicleType::Ufo, true},     {-183.519,    -193.185,   -197.343,  -194.049}},
 
 
-	{{OrbType::Pink, VehicleType::Cube, false},   {412.884,     434.7,      443.988,   436.644}},
-	{{OrbType::Pink, VehicleType::Cube, true},    {330.318,     347.76,     355.212,   349.272}},
+        {{OrbType::Pink, VehicleType::Cube, false},   {412.884,     434.7,      443.988,   436.644}},
+        {{OrbType::Pink, VehicleType::Cube, true},    {330.318,     347.76,     355.212,   349.272}},
+        {{OrbType::Pink, VehicleType::Robot, false},   {412.884,     434.7,      443.988,   436.644}},
+        {{OrbType::Pink, VehicleType::Robot, true},    {330.318,     347.76,     355.212,   349.272}},
+        {{OrbType::Pink, VehicleType::Spider, false},   {412.884,     434.7,      443.988,   436.644}},
+        {{OrbType::Pink, VehicleType::Spider, true},    {330.318,     347.76,     355.212,   349.272}},
+        {{OrbType::Pink, VehicleType::Swing, false},   {412.884,     434.7,      443.988,   436.644}},
+        {{OrbType::Pink, VehicleType::Swing, true},    {330.318,     347.76,     355.212,   349.272}},
 
 	{{OrbType::Pink, VehicleType::Ship, false},   {212.166,     223.398,    228.15,    224.37}},
 	{{OrbType::Pink, VehicleType::Ship, true},    {169.776,     178.686,    182.52,    179.496}},
