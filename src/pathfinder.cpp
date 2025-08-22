@@ -1,4 +1,5 @@
 #include <set>
+#include <cstdint>
 #include <Level.hpp>
 #include <random>
 #include <gdr/gdr.hpp>
@@ -40,9 +41,9 @@ int tryInputs(Level2& lvl, std::set<uint16_t> inputs) {
 
 		lvl.runFrame(lvl.press);
 	}
-	int final = lvl.currentFrame();
-	float lastX = lvl.latestFrame().pos.y;
-	float lastY = lvl.latestFrame().pos.y;
+        int final = lvl.currentFrame();
+        float lastX = lvl.latestFrame().pos.x;
+        float lastY = lvl.latestFrame().pos.y;
 
 	lvl.rollback(frame);
 	lvl.press = press_before;
