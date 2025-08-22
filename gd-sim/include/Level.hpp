@@ -2,6 +2,7 @@
 #include <Object.hpp>
 #include <Player.hpp>
 #include <vector>
+#include <cstdint>
 
 class Level {
 	void initLevelSettings(std::string const& lvlSettings, Player& player);
