@@ -4,7 +4,9 @@
 #include <Geode/modify/LevelInfoLayer.hpp>
 #include <UIBuilder.hpp>
 #include "pathfinder.hpp"
+#include <chrono>
 #include <future>
+#include <unordered_set>
 
 using namespace geode::prelude;
 using namespace geode::utils::file;
