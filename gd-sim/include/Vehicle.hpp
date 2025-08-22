@@ -3,11 +3,14 @@
 #include <functional>
 
 enum class VehicleType {
-	Cube,
-	Ship,
-	Ball,
-	Ufo,
-	Wave
+        Cube,
+        Ship,
+        Ball,
+        Ufo,
+        Wave,
+        Robot,
+        Spider,
+        Swing
 };
 
 struct Player;

@@ -124,7 +124,7 @@ std::optional<ObjectContainer> Object::create(std::unordered_map<int, std::strin
 	objs(({ 67 }), Pad, 25, 6)
 	objs(({ 36, 84, 141 }), Orb, 36, 36)
 
-	objs(({ 12, 13, 47, 111 , 660 }), VehiclePortal, 34, 86)
+        objs(({ 12, 13, 47, 111 , 660, 1331, 1332, 1916 }), VehiclePortal, 34, 86)
 	objs(({ 10, 11 }), GravityPortal, 25, 75)
 
 	objs(({ 99, 101 }), SizePortal, 31, 90)

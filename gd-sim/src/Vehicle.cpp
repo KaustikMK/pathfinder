@@ -322,17 +322,41 @@ Vehicle wave() {
 	return v;
 }
 
+Vehicle robot() {
+        auto v = cube();
+        v.type = VehicleType::Robot;
+        return v;
+}
+
+Vehicle spider() {
+        auto v = cube();
+        v.type = VehicleType::Spider;
+        return v;
+}
+
+Vehicle swing() {
+        auto v = wave();
+        v.type = VehicleType::Swing;
+        return v;
+}
+
 Vehicle Vehicle::from(VehicleType v) {
-	switch (v) {
-		case VehicleType::Cube:
-			return cube();
-		case VehicleType::Ship:
-			return ship();
-		case VehicleType::Ball:
-			return ball();
-		case VehicleType::Ufo:
-			return ufo();
-		case VehicleType::Wave:
-			return wave();
-	}
+        switch (v) {
+                case VehicleType::Cube:
+                        return cube();
+                case VehicleType::Ship:
+                        return ship();
+                case VehicleType::Ball:
+                        return ball();
+                case VehicleType::Ufo:
+                        return ufo();
+                case VehicleType::Wave:
+                        return wave();
+                case VehicleType::Robot:
+                        return robot();
+                case VehicleType::Spider:
+                        return spider();
+                case VehicleType::Swing:
+                        return swing();
+        }
 }

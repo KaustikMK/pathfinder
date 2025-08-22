@@ -26,8 +26,14 @@ Pad::Pad(Vec2D size, std::unordered_map<int, std::string>&& fields) : EffectObje
 }
 
 const velocity_map<PadType, VehicleType, bool> pad_velocities = {
-	{{PadType::Yellow, VehicleType::Cube, false}, {864,         864,        864}},
-	{{PadType::Yellow, VehicleType::Cube, true},  {691.2,       691.2,      691.2}},
+        {{PadType::Yellow, VehicleType::Cube, false}, {864,         864,        864}},
+        {{PadType::Yellow, VehicleType::Cube, true},  {691.2,       691.2,      691.2}},
+        {{PadType::Yellow, VehicleType::Robot, false}, {864,         864,        864}},
+        {{PadType::Yellow, VehicleType::Robot, true},  {691.2,       691.2,      691.2}},
+        {{PadType::Yellow, VehicleType::Spider, false}, {864,         864,        864}},
+        {{PadType::Yellow, VehicleType::Spider, true},  {691.2,       691.2,      691.2}},
+        {{PadType::Yellow, VehicleType::Swing, false}, {864,         864,        864}},
+        {{PadType::Yellow, VehicleType::Swing, true},  {691.2,       691.2,      691.2}},
 
 	{{PadType::Yellow, VehicleType::Ship, false}, {432,         432,        432}},
 	{{PadType::Yellow, VehicleType::Ship, true},  {691.2,       691.2,      691.2}},
@@ -39,8 +45,14 @@ const velocity_map<PadType, VehicleType, bool> pad_velocities = {
 	{{PadType::Yellow, VehicleType::Ufo, true},   {458.784,     691.2,      691.2}},
 
 
-	{{PadType::Blue, VehicleType::Cube, false},   {-345.6,    -345.6,     -345.6}},
-	{{PadType::Blue, VehicleType::Cube, true},    {-276.48,    -276.48,    -276.48}},
+        {{PadType::Blue, VehicleType::Cube, false},   {-345.6,    -345.6,     -345.6}},
+        {{PadType::Blue, VehicleType::Cube, true},    {-276.48,    -276.48,    -276.48}},
+        {{PadType::Blue, VehicleType::Robot, false},   {-345.6,    -345.6,     -345.6}},
+        {{PadType::Blue, VehicleType::Robot, true},    {-276.48,    -276.48,    -276.48}},
+        {{PadType::Blue, VehicleType::Spider, false},   {-345.6,    -345.6,     -345.6}},
+        {{PadType::Blue, VehicleType::Spider, true},    {-276.48,    -276.48,    -276.48}},
+        {{PadType::Blue, VehicleType::Swing, false},   {-345.6,    -345.6,     -345.6}},
+        {{PadType::Blue, VehicleType::Swing, true},    {-276.48,    -276.48,    -276.48}},
 
 	{{PadType::Blue, VehicleType::Ship, false},   {-229.392,    -345.6,     -345.6}},
 	{{PadType::Blue, VehicleType::Ship, true},    {-183.519,    -276.48,    -276.48}},
@@ -52,8 +64,14 @@ const velocity_map<PadType, VehicleType, bool> pad_velocities = {
 	{{PadType::Blue, VehicleType::Ufo, true},     {-183.519,    -276.48,    -276.48}},
 
 
-	{{PadType::Pink, VehicleType::Cube, false},   {561.6,       561.6,      561.6}},
-	{{PadType::Pink, VehicleType::Cube, true},    {449.28,      449.28,     449.28}},
+        {{PadType::Pink, VehicleType::Cube, false},   {561.6,       561.6,      561.6}},
+        {{PadType::Pink, VehicleType::Cube, true},    {449.28,      449.28,     449.28}},
+        {{PadType::Pink, VehicleType::Robot, false},   {561.6,       561.6,      561.6}},
+        {{PadType::Pink, VehicleType::Robot, true},    {449.28,      449.28,     449.28}},
+        {{PadType::Pink, VehicleType::Spider, false},   {561.6,       561.6,      561.6}},
+        {{PadType::Pink, VehicleType::Spider, true},    {449.28,      449.28,     449.28}},
+        {{PadType::Pink, VehicleType::Swing, false},   {561.6,       561.6,      561.6}},
+        {{PadType::Pink, VehicleType::Swing, true},    {449.28,      449.28,     449.28}},
 
 	{{PadType::Pink, VehicleType::Ship, false},   {302.4,       302.4,      302.4}},
 	{{PadType::Pink, VehicleType::Ship, true},    {241.92,      241.92,     241.92}},

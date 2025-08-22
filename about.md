@@ -2,8 +2,8 @@
 
 Auto-generate macros for levels using simulation! This mod uses a physics simulator under the hood to solve levels in seconds! It does not come with a bot, you will need to install one for this.
 
-# ONLY SUPPORTS 1.7 LEVELS
-### None of these are supported
+# Supports up to 1.7 level mechanics
+### The following are currently unsupported
 - Duals
 - Upside-down Slopes
 - Partially Rotated Objects (not 90 degrees)
@@ -16,7 +16,7 @@ Auto-generate macros for levels using simulation! This mod uses a physics simula
 - Red Pads / Red Orbs
 - Dash Orbs
 - Teleport Portals
-- Anything from 2.2
+- Many features from 2.2 (work in progress)
 
 # How To Use
 
