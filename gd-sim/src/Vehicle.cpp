@@ -335,8 +335,41 @@ Vehicle spider() {
 }
 
 Vehicle swing() {
-        auto v = wave();
+        Vehicle v;
         v.type = VehicleType::Swing;
+
+        v.enter = +[](Player& p, Object const* o, bool) {
+                p.actions.push_back([](Player& p) {
+                        p.size = Vec2D(30, 30) * (p.small ? 0.6 : 1);
+                });
+
+                p.floor = std::max(0., std::ceil((o->pos.y - 180) / 30.)) * 30;
+                p.ceiling = p.floor + 300;
+        };
+
+        v.clamp = +[](Player& p) {
+                p.velocity = std::clamp(p.velocity,
+                        p.small ? -540.0 : -480.0,
+                        p.small ? 540.0 : 480.0);
+
+                if (p.gravTop(p) > p.gravCeiling()) {
+                        if (p.velocity > 0)
+                                p.setVelocity(0, false);
+                        p.pos.y = p.grav(p.gravCeiling()) - p.grav(p.size.y / 2);
+                }
+
+                if (p.gravBottom(p) < p.gravFloor() && p.velocity < 0) {
+                        p.setVelocity(0, false);
+                        p.pos.y = p.grav(p.gravFloor()) + p.grav(p.size.y / 2);
+                }
+        };
+
+        v.update = +[](Player& p) {
+                const double accel = p.small ? 1500.0 : 1275.0;
+                p.acceleration = p.input ? accel : -accel;
+                p.rotation += (p.input ? -1 : 1) * 600.0 * p.dt;
+        };
+
         return v;
 }
 
@@ -359,4 +392,5 @@ Vehicle Vehicle::from(VehicleType v) {
                 case VehicleType::Swing:
                         return swing();
         }
+        return cube();
 }
