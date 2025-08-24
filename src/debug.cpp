@@ -1,6 +1,14 @@
 #include <Geode/Geode.hpp>
 #include <UIBuilder.hpp>
 
+#include <cstdint>
+#include <filesystem>
+#include <fstream>
+#include <iterator>
+#include <sstream>
+#include <string>
+#include <vector>
+
 using namespace geode::prelude;
 using namespace geode::utils::file;
 
